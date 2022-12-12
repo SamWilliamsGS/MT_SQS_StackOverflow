@@ -6,6 +6,6 @@ public class MyConsumerDefinition2 : ConsumerDefinition<MyConsumer2>
 {
     public MyConsumerDefinition2()
     {
-        Endpoint(x => x.Name = "MyQueue2");
+        Endpoint(x => x.Name = $"MyQueue2-{Random.Shared.Next(1000)}.fifo");
     }
 }

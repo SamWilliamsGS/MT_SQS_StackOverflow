@@ -13,6 +13,10 @@ builder.Services.AddMassTransit(x =>
     x.AddConsumer<MyConsumer2>(typeof(MyConsumerDefinition2));
     x.AddConsumer<MyConsumer3>(typeof(MyConsumerDefinition3));
     x.AddConsumer<MyConsumer4>(typeof(MyConsumerDefinition4));
+    x.AddConsumer<MyConsumer5>(typeof(MyConsumerDefinition5));
+    x.AddConsumer<MyConsumer6>(typeof(MyConsumerDefinition6));
+    x.AddConsumer<MyConsumer7>(typeof(MyConsumerDefinition7));
+    x.AddConsumer<MyConsumer8>(typeof(MyConsumerDefinition8));
     
     x.AddConfigureEndpointsCallback((_, cfg) =>
     {
@@ -32,7 +36,7 @@ builder.Services.AddMassTransit(x =>
 
         cfg.Message<MyMessageType>(c =>
         {
-            c.SetEntityName("MySNSTopicName");
+            c.SetEntityName("MySNSTopicName.fifo");
         });
 
         cfg.ConfigureEndpoints(context);
