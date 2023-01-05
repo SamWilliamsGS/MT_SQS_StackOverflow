@@ -7,8 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="MassTransit" Version="8.0.10-develop.692" />
-      <PackageReference Include="MassTransit.AmazonSQS" Version="8.0.10-develop.692" />
+      <PackageReference Include="MassTransit" Version="8.0.11-develop.786" />
+      <PackageReference Include="MassTransit.AmazonSQS" Version="8.0.11-develop.786" />
     </ItemGroup>
 
 </Project>
