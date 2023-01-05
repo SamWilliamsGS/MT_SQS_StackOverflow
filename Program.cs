@@ -17,7 +17,7 @@ builder.Services.AddMassTransit(x =>
     x.AddConsumer<MyConsumer6>(typeof(MyConsumerDefinition6));
     x.AddConsumer<MyConsumer7>(typeof(MyConsumerDefinition7));
     x.AddConsumer<MyConsumer8>(typeof(MyConsumerDefinition8));
-    
+
     x.AddConfigureEndpointsCallback((_, cfg) =>
     {
         if (cfg is IAmazonSqsReceiveEndpointConfigurator configurator)
@@ -25,7 +25,7 @@ builder.Services.AddMassTransit(x =>
             configurator.AutoDelete = true;
         }
     });
-    
+
     x.UsingAmazonSqs((context, cfg) =>
     {
         cfg.Host(c_Region, h =>
